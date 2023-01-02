@@ -1,0 +1,342 @@
+/*universal styles*/
+@font-face {
+    font-family: 'Bebas Neue', cursive;
+    src: url(./resources/Document_fonts/BebasNeue-Regular.otf) format(opentype);
+}
+
+@font-face {
+    font-family: 'Cabin', sans-serif;
+    src: url(./resources/Document_fonts/Cabin/static/Cabin/Cabin-Regular.ttf) format(opentype);
+}
+
+html {
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p, a, li {
+    font-family: 'Cabin', sans-serif;
+}
+
+a {
+    color: rgb(237, 110, 31);
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgba(80, 38, 11, 0.672);
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+    color: rgb(10, 50, 50);
+}
+
+/*navbar flexbox*/
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+        z-index: 100;
+        border-bottom: 1px solid rgba(222, 111, 46, 0.413);
+    }
+
+    .frikilogo {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .frikilogo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 2rem;
+       }
+
+    header, main, footer {
+        position: relative;
+        top: 30px;
+    } 
+
+/*postas y catalogo grid*/
+#mainpage {
+    display: grid;
+    grid-template: repeat(1, 1fr) / 300px 1fr;
+}
+
+.gridcontainer {
+    display: grid;
+    height: 1000px;
+    gap: 20px;
+}
+
+video{
+    max-width: 200px;
+    height: auto;
+    border: 5px solid white;
+}  
+
+#postas {
+    /*background-image: linear-gradient(70deg, rgba(229, 107, 26, 0.659), rgba(102, 233, 218, 0.407));*/
+    background-color: #A6E7F2;
+    color: #474747;
+    text-align: center;
+    box-shadow:  0 4px 8px 0;
+}
+
+.posta {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#postas h2{
+    margin-bottom: 0;
+} 
+
+.posta h3 {
+    margin-bottom: 2.5rem;
+} 
+
+.gridcatalogo {
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+}
+
+.catalogo_griditem img {
+    max-height: 250px;
+    width: auto;
+    object-fit: cover;
+}
+
+.catalogo_griditem {
+    text-align: center;
+    border: 2px solid rgba(186, 112, 78, 0.636);
+}
+/*footer grid o flexbox*/
+
+footer {
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+    text-align: center;
+   /* background-image: linear-gradient(45deg, rgba(229, 107, 26, 0.659), rgba(102, 233, 218, 0.407));*/
+   margin-top: 1rem;
+   color: #474747; 
+}
+
+footer h2 {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.footer_griditem {
+    margin-right: 10px;
+    max-height: 400px;
+    box-shadow:  0 4px 8px 0;
+    background-color: #A6E7F2;
+}
+
+#contacto {
+    margin-left: 10px;
+}
+
+#artistas{
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    height: 500px;
+    justify-items: center;
+}
+
+.artist {
+    max-width: 300px;
+    height: 500px;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.artist img {
+    max-width: 150px;
+    height: auto;
+    border: 5px solid white;
+}
+
+#contacto a img {
+    max-height: 30px;
+    width: auto;
+    margin: 10px;
+    align-items: center;
+    
+}
+
+/*catalogo html styles*/
+/*navbar*/
+#inicio {
+    color: #5ab3c3;
+}
+
+.catal_navbar {
+    font-size: 0.8rem;
+}
+
+/*body*/
+#catalogotitle {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    text-align: center;
+    color: rgb(10, 50, 50);
+    position: relative;
+    top: 20px;
+}
+
+#catalogotitle h1 {
+    margin-bottom: 0;
+}
+
+.catalogo_section h2 {
+    text-align: left;
+    padding-top: 55px;
+}
+
+#catalogo_all {
+    margin-left: 2rem;
+    margin-top: 0;
+}
+
+#joyeria {
+    margin-top: 0;
+}
+
+.catalogopage {
+    display: grid;
+    grid-template: 1fr 20px/ repeat(5, 1fr);
+    grid-auto-rows: 200px 20px;
+    grid-auto-columns: auto;
+    gap: 10px;
+    border-bottom: 1px solid  #A6E7F2;
+    padding-bottom: 2rem;
+    margin-right: 40px;
+}
+
+.catalogopage img {
+    max-height: 200px;
+    width: auto;
+
+}
+
+.line {
+    grid-column: 1/6;
+    background-color: rgba(229, 103, 0, 0.687);
+    height: 1px;
+}
+
+/*@medias*/
+@media screen and (max-width:1126px){
+    #postas {
+        display: none;
+        margin: 0 auto;
+    }
+
+    #mainpage {
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    }
+
+    .catalogopage img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .catal_navbar li {
+        font-size: 0.6rem;
+        margin-right: 1rem;
+    }
+
+}
+
+@media screen and (max-width:830px){
+    .gridcatalogo {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+    .gridcontainer {
+        height: 2000px; 
+    }
+    
+    footer {
+        position: relative;
+        top: 100px;
+    }
+
+    .footer_griditem {
+        max-height: 450px;
+    }
+
+    .artist p, #contacto p {
+        padding: 5px;
+    }
+
+    .catalogopage img {
+        max-width: 130px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:558px) {
+    .gridcatalogo {
+        grid-template: repeat(3, 1fr) / repeat(1, 1fr);
+    }
+
+    .gridcontainer {
+        height: 3000px; 
+    }
+
+   footer {
+    grid-template: 2fr 1fr / 1fr;
+   }
+
+   .footer_griditem {
+    margin-top: 20px;
+    align-items: center;
+}
+
+    #contacto {
+        max-height: 200px;
+    }
+
+    .navbar li {
+        margin-right: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .catal_navbar_item {
+        display: none;
+    }
+
+    .catal_navbar {
+        width: 150px;
+        padding-top: 5px;
+    }
+
+    .catalogopage {
+        overflow: scroll;
+    }
+}
